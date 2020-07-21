@@ -101,6 +101,10 @@ sin
 Sin
 
 
+sin[Pi]
+Sin[Pi]
+
+
 (*
   These capital letters are all built-in functions/constants.
   Don't use them as variables!
