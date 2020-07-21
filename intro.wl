@@ -453,6 +453,10 @@ DSolve[{y''[x] + 4 y'[x] + 3 y[x] == 27 x^2, y[0] == 1, y'[0] == 3}, y[x], x]
 DSolveValue[{y''[x] + 4 y'[x] + 3 y[x] == 27 x^2, y[0] == 1, y'[0] == 3}, y[x], x]
 
 
+sSolution = DSolveValue[{x''[t] == a, x[0] == 0, x'[0] == u}, x[t], t];
+Expand[sSolution]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
