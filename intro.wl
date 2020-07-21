@@ -112,13 +112,11 @@ O
 
 (* ::Subsubsection:: *)
 (*Set (single equals): assign a value*)
+(*Do NOT confuse with double equals (checks for equality)!*)
 
 
 myVariable = 3
 someString = "blah blah"
-
-
-(* Do NOT confuse with double equals (checks for equality)! *)
 
 
 (* ::Subsubsection:: *)
@@ -141,3 +139,25 @@ f[x_] := x^2
 
 (* Call it: *)
 f[3]
+
+
+(* ::Subsection:: *)
+(*Comparing values (==)*)
+
+
+(* ::Subsubsection:: *)
+(*Equal (double equals): compare two values*)
+(*Do NOT confuse with single equals (assigns a value)!*)
+
+
+2 + 2 == 4
+2 + 2 == 5
+
+
+(*
+  If you use single equals by mistake, an error occurs:
+*)
+2 + 2 = 4
+
+
+
