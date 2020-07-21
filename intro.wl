@@ -266,3 +266,30 @@ Infinity
 
 
 E ^ (I * Pi) + 1
+
+
+(* ::Subsection:: *)
+(*Lists (curly brackets)*)
+
+
+list = {"abc", -99, 50, 345.6789}
+
+
+(* ::Subsubsection:: *)
+(*Get the length*)
+
+
+Length[list]
+
+
+(* ::Subsubsection:: *)
+(*Extract a part of a list (doubled square brackets)*)
+(*NOTE: Mathematica uses 1-based indexing*)
+
+
+list[[1]]
+list[[2]]
+
+
+(* Negative indices from the end *)
+list[[-1]]
