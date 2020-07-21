@@ -752,6 +752,41 @@ Through[{fun1, fun2, fun3, fun4}[x]]
 
 
 (* ::Subsection:: *)
+(*Alternate notations for applying functions*)
+
+
+(* ::Subsubsection:: *)
+(*Prefix form (square brackets)*)
+
+
+fun[x]
+
+
+(* ::Subsubsection:: *)
+(*Postfix form (double slash)*)
+
+
+x // fun
+
+
+(*
+  This is useful for post-processing.
+  E.g. suppose you have a large exact expression,
+  and after a while you want to display its numerical value.
+  Rather than wrapping it inside, like N[...],
+  simply append // N to it:
+*)
+(1 + Sqrt[2]) (1 + Sqrt[3]) (1 + Sqrt[4]) / Exp[3] // N
+
+
+(* ::Subsubsection:: *)
+(*Infix form for multiple arguments (tildes)*)
+
+
+x1 ~ fun ~ x2
+
+
+(* ::Subsection:: *)
 (*Patterns*)
 
 
