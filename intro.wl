@@ -15,6 +15,12 @@
 *)
 
 
+(*
+  Use Mathematica in the browser (can't save anything though):
+  <https://develop.open.wolframcloud.com/app/view/newNotebook?ext=nb>
+*)
+
+
 (* ::Section:: *)
 (*Basics*)
 
