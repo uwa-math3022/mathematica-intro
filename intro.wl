@@ -213,4 +213,41 @@ f[3]
 2 ^ 100
 
 
+(* ::Subsection:: *)
+(*Use square brackets to apply a function*)
+
+
+Sqrt[2]
+Exp[3]
+Log[3]
+Cos[Pi]
+Sin[0]
+Cosh[0]
+Sinh[1]
+
+
+(* Use N to convert to approximate form *)
+N[Sqrt[2]]
+
+
+(* ::Subsection:: *)
+(*Exact input ==> Exact output*)
+(*Approximate input ==> Approximate output*)
+
+
+(* Exact vs approximate (1) *)
+100 / 7
+100 / 7.0
+
+
+(* Exact vs approximate (2) *)
+Sqrt[2]
+Sqrt[2.]
+
+
+(* Any approximate part will ruin the exactness of the whole expression *)
+1 + Pi
+1. + Pi
+
+
 
