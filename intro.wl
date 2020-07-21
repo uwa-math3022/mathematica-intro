@@ -553,6 +553,17 @@ Table[n^2, {n, list}]
 {1, 2} + {3, 4, 5}
 
 
+(* ::Subsection:: *)
+(*Many built-in functions have the Listable attribute (automatic threading over lists)*)
+
+
+Sqrt[{1, 2, 3, {4, 5}}]
+
+
+list = Range[0, 1, 0.1]
+Exp[list]
+
+
 (* ::Section:: *)
 (*Matrix stuff*)
 
