@@ -153,6 +153,38 @@ f[x_] := x^2
 f[3]
 
 
+(* ::Subsubsection:: *)
+(*Difference between Set (equals) and SetDelayed (colon equals)*)
+
+
+(*
+  Set (equals) evaluates the RHS immediately.
+  Notice how 'alreadyDefinedVariable' on the RHS
+  is NOT green like 'alreadyDefinedVariable' the LHS:
+*)
+alreadyDefinedVariable = 3;
+f[alreadyDefinedVariable_] = alreadyDefinedVariable^2
+
+
+(* This gives unexpected behaviour: *)
+f[2]
+f[100]
+
+
+(*
+  SetDelayed (colon equals) doesn't evaluate the RHS until the function is called.
+  Notice how 'alreadyDefinedVariable' on the RHS
+  IS green like 'alreadyDefinedVariable' the LHS:
+*)
+alreadyDefinedVariable = 3;
+f[alreadyDefinedVariable_] := alreadyDefinedVariable^2
+
+
+(* That's better *)
+f[2]
+f[100]
+
+
 (* ::Subsection:: *)
 (*Comparing values (==)*)
 
