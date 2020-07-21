@@ -293,3 +293,15 @@ list[[2]]
 
 (* Negative indices from the end *)
 list[[-1]]
+
+
+(* ::Section:: *)
+(*Doing algebra*)
+
+
+(* ::Section:: *)
+(*Plotting stuff*)
+
+
+(* ::Section:: *)
+(*Don't use loops*)
