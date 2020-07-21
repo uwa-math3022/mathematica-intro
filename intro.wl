@@ -621,6 +621,62 @@ Inverse[mat]
 (*Everything is an expression*)
 
 
+(*
+  Mathematica tries to be as general as possible.
+  As we have seen above, you an do algebra on strings and graphics.
+  Everything is an "expression" with the following representation:
+    f[x, y, ...]
+  The 'f' part is called the 'Head'.
+*)
+
+
+(* ::Subsubsection:: *)
+(*Use FullForm to see the internal representation of an expression*)
+
+
+FullForm[x + y + z]
+FullForm[a b]
+FullForm[x ^ n]
+FullForm[1 -> 2]
+FullForm[expr1 == expr2]
+FullForm[{x, y, z}]
+
+
+FullForm[a x^2 + b x + c]
+(*
+  Alternatively, you can see how an expression is built up by either
+  (a) repeatedly clicking an expression, or
+  (b) pressing [Ctrl + .]
+  both of which extend the selection according to how the expression is structured.
+*)
+
+
+(* ::Subsubsection:: *)
+(*Use Head to see the 'Head' part of the expression*)
+
+
+Head[x + y + z]
+Head[a b]
+Head[x ^ n]
+Head[1 -> 2]
+Head[expr1 == expr2]
+Head[{x, y, z}]
+
+
+(* ::Subsubsection:: *)
+(*Everything has a Head*)
+
+
+Head[1]
+Head[1.2]
+Head[3 + 4 I]
+Head["Boaty McBoatface"]
+
+
+Head[x]
+Head[Head]
+
+
 (* ::Subsection:: *)
 (*Patterns*)
 
