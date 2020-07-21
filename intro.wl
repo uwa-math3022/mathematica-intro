@@ -494,6 +494,32 @@ Plot3D[Sin[x] Cos[y], {x, 0, 2 Pi}, {y, 0, 2 Pi}]
 (*Don't use loops*)
 
 
+(* ::Subsection:: *)
+(*Use Table*)
+
+
+(* ::Subsubsection:: *)
+(*List some squares*)
+
+
+Table[n ^ 2, {n, 1, 10}]
+
+
+(* ::Subsubsection:: *)
+(*Use step size 2*)
+
+
+Table[n ^ 2, {n, 1, 10, 2}]
+
+
+(* ::Subsubsection:: *)
+(*Iterate over a list*)
+
+
+list = {2, "blah", 3 + 4 I};
+Table[n^2, {n, list}]
+
+
 (* ::Section:: *)
 (*Matrix stuff*)
 
