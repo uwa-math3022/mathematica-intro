@@ -435,6 +435,39 @@ Limit[(x^(1 + n) - 1) / (1 + n), n -> -1]
 (*Plotting stuff*)
 
 
+(* ::Subsection:: *)
+(*Plot a function*)
+
+
+Plot[x^2 (1 - x), {x, 0, 1}]
+
+
+(* ::Subsection:: *)
+(*Plot multiple functions*)
+
+
+(* Put the functions inside a list (curly brackets) *)
+Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}]
+
+
+(* ::Subsection:: *)
+(*Options are key driven, specified using rules (->)*)
+
+
+Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}
+  , PlotLegends -> "Expressions"
+  , PlotStyle -> {Directive[Red, Dashed], Black}
+  , PlotRange -> {-2, 2}
+]
+
+
+(* ::Subsection:: *)
+(*Plot a function of two variables*)
+
+
+Plot3D[Sin[x] Cos[y], {x, 0, 2 Pi}, {y, 0, 2 Pi}]
+
+
 (* ::Section:: *)
 (*Don't use loops*)
 
