@@ -405,6 +405,21 @@ Dt[x y, x]
 Dt[u v, x]
 
 
+(* ::Subsubsection:: *)
+(*Integration*)
+
+
+(* Indefinite *)
+Integrate[2 x^2 - x^1000, x]
+Integrate[1/x, x]
+Integrate[Sqrt[9 - Sqrt[x]], x]
+
+
+(* Definite *)
+Integrate[1/x, {x, 1, 2}]
+Integrate[r^2 Sin[theta], {r, 0, rMax}, {theta, 0, Pi}, {phi, 0, 2 Pi}]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
