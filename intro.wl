@@ -43,4 +43,6 @@
 (*
   An output cell will containing the result
   will appear below the input cell.
+  Pressing [Enter] instead of [Shift + Enter]
+  will insert a line break instead of evaluating the cell.
 *)
