@@ -230,6 +230,11 @@ Sinh[1]
 N[Sqrt[2]]
 
 
+(* Round brackets mean multiplication, NOT function application *)
+Sin(Pi)    (* whoops *)
+Sin[Pi]
+
+
 (* ::Subsection:: *)
 (*Exact input ==> Exact output*)
 (*Approximate input ==> Approximate output*)
