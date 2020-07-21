@@ -85,6 +85,7 @@ myVariable =.
 
 (* ::Subsubsection:: *)
 (*... are case-sensitive. In particular, built-in functions start with a capital letter.*)
+(*Best practice: start your own variables with a lower-case letter.*)
 
 
 (* A user variable, not set to anything (blue) *)
@@ -93,3 +94,13 @@ sin
 
 (* The built-in sine function (black, since it's already defined) *)
 Sin
+
+
+(* These capital letters are all built-in functions. Don't use them as variables! *)
+C
+D
+E
+I
+K
+N
+O
