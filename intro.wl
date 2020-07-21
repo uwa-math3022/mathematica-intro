@@ -335,6 +335,38 @@ diskGraphic = Graphics[Disk[], ImageSize -> 100]
 diskGraphic / diskGraphic
 
 
+(* ::Subsection:: *)
+(*Built-in goodies*)
+
+
+(* ::Subsubsection:: *)
+(*Expand*)
+
+
+Expand[(1 + x)^6]
+
+
+(* ::Subsubsection:: *)
+(*Factorise*)
+
+
+Factor[x^16 - 1]
+
+
+(* ::Subsubsection:: *)
+(*Partial fractions*)
+
+
+Apart[1 / ((x^3 - 3 x) x^5)]
+
+
+(* ::Subsubsection:: *)
+(*Sometimes you need to tell Mathematica some assumptions*)
+
+
+FullSimplify[Sqrt[x^2], Assumptions -> x > 0]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
