@@ -227,7 +227,10 @@ Cosh[0]
 Sinh[1]
 
 
-(* Use N to convert to approximate form *)
+(* ::Subsection:: *)
+(*Use N to convert to approximate form*)
+
+
 N[Sqrt[2]]
 N[Exp[3]]
 N[Log[3]]
@@ -237,8 +240,11 @@ N[Cosh[0]]
 N[Sinh[1]]
 
 
-(* Round brackets mean multiplication, NOT function application *)
-Sin(Pi)    (* whoops: this is the constant 'Pi' multiplied by the built-in function 'Sin' *)
+(* ::Subsection:: *)
+(*Round brackets mean multiplication, NOT function application*)
+
+
+Sin(Pi)  (* whoops: this is the constant 'Pi' multiplied by the built-in function 'Sin' *)
 Sin[Pi]
 
 
