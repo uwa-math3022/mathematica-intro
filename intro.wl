@@ -431,6 +431,28 @@ Limit[Sin[x] / x, x -> Infinity]
 Limit[(x^(1 + n) - 1) / (1 + n), n -> -1]
 
 
+(* ::Subsubsection:: *)
+(*Differential equations (remember to use double equals)*)
+
+
+(* No initial conditions *)
+DSolve[y''[x] + 4 y'[x] + 3 y[x] == 27 x^2, y[x], x]
+
+
+DSolve[x^2 (1 + y''[x]) == y[x], y[x], x]
+
+
+(* Initial conditions *)
+DSolve[{y''[x] + 4 y'[x] + 3 y[x] == 27 x^2, y[0] == 1, y'[0] == 3}, y[x], x]
+
+
+(* ::Subsubsection:: *)
+(*Use DSolveValue to get the function rather than a rule list*)
+
+
+DSolveValue[{y''[x] + 4 y'[x] + 3 y[x] == 27 x^2, y[0] == 1, y'[0] == 3}, y[x], x]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
