@@ -282,6 +282,10 @@ ComplexInfinity (* Infinity in the complex plane with indeterminate argument *)
 E ^ (I * Pi) + 1
 
 
+(* A thousand digits of pi *)
+N[Pi, 1000]
+
+
 (* ::Subsection:: *)
 (*Lists (curly brackets)*)
 
