@@ -9,7 +9,8 @@
 
 
 (*
-  Press F1 for help (unless you're on a Raspberry Pi, in which case bad luck).
+  Press F1 for help (unless you're on a Raspberry Pi,
+  in which case bad luck).
   If you highlight a built-in function and press F1,
   it will take you straight to the documentation page.
 *)
@@ -181,7 +182,8 @@ f[100]
 
 
 (*
-  SetDelayed (colon equals) doesn't evaluate the RHS until the function is called.
+  SetDelayed (colon equals) doesn't evaluate the RHS
+  until the function is called.
   Notice how 'alreadyDefinedVariable' on the RHS below
   IS green like 'alreadyDefinedVariable' the LHS
   (it's part of the same local scope):
@@ -209,8 +211,9 @@ f[100]
 
 
 (*
-  If you use single equals by mistake, an error occurs
-  when Mathematica tries to assign the value 4 to the expression '2 + 2':
+  If you use single equals by mistake,
+  an error occurs when Mathematica tries
+  to assign the value 4 to the expression '2 + 2':
 *)
 2 + 2 = 4
 
@@ -245,7 +248,10 @@ f[100]
 (*Multiplication (asterisk OR space)*)
 
 
-(* The front end will display a grey times symbol if you just use a space. *)
+(*
+  The front end will display a grey times symbol
+  if you just use a space.
+*)
 3 * 4
 111 999
 123456789 32109876
@@ -298,7 +304,11 @@ N[Sinh[1]]
 (*Round brackets mean multiplication, NOT function application*)
 
 
-Sin(Pi)  (* whoops: this is the constant 'Pi' multiplied by the built-in function 'Sin' *)
+(* Whoops: this is the constant 'Pi' multiplied by the function 'Sin' *)
+Sin(Pi)
+
+
+(* That's better *)
 Sin[Pi]
 
 
@@ -307,12 +317,12 @@ Sin[Pi]
 (*Approximate input ==> Approximate output*)
 
 
-(* Exact vs approximate (1) *)
+(* Exact vs approximate I *)
 100 / 7
 100 / 7.0
 
 
-(* Exact vs approximate (2) *)
+(* Exact vs approximate II *)
 Sqrt[2]
 Sqrt[2.]
 
@@ -789,7 +799,8 @@ FullForm[a x^2 + b x + c]
   Alternatively, you can see how an expression is built up by either
   (a) repeatedly clicking an expression, or
   (b) pressing [Ctrl + .]
-  both of which extend the selection according to how the expression is structured.
+  both of which extend the selection according to
+  how the expression is structured.
 *)
 
 
