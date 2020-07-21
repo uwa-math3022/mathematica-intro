@@ -26,7 +26,7 @@
 
 
 (* ::Subsection:: *)
-(*Cells*)
+(*Evaluating a cell*)
 
 
 (*
