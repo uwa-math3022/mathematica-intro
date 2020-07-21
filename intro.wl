@@ -787,7 +787,99 @@ x1 ~ fun ~ x2
 
 
 (* ::Subsection:: *)
-(*Patterns*)
+(*Patterns I: basics*)
+
+
+expressionList = {a, b, "ccc", 1, 2, 3.5, fun[4], fun[5], aaa[aaa], 3[3], 3 + Sqrt[5]}
+
+
+(* ::Subsubsection:: *)
+(*Match a specific expression*)
+
+
+Cases[expressionList, 2]
+
+
+(* ::Subsubsection:: *)
+(*Blank (underscore) matches anything*)
+
+
+Cases[expressionList, _]
+
+
+(* ::Subsubsection:: *)
+(*Match expressions of the form anything[anything]*)
+
+
+Cases[expressionList, _[_]]
+
+
+(* ::Subsubsection:: *)
+(*Match expressions of the form anything[anything] where the two anythings are equal*)
+
+
+Cases[expressionList, x_[y_] /; x == y]
+
+
+(* ::Subsubsection:: *)
+(*Match expressions with a specific Head*)
+
+
+Cases[expressionList, _Integer]
+Cases[expressionList, _String]
+
+
+(* ::Subsection:: *)
+(*Patterns II: sequences*)
+
+
+listOfLists = {
+  {1},
+  {1, 2, 3},
+  {4, 5, "xx", "yyy"},
+  {-99, -999, "aaa", Cosh[1]},
+  {"This is a string."},
+  {}
+};
+
+
+(* ::Subsubsection:: *)
+(*Lists containing 1 expression: use Blank (underscore)*)
+
+
+Cases[listOfLists, {_}]
+
+
+(* ::Subsubsection:: *)
+(*Lists containing 1 or more expressions: use BlankSequence (double underscore)*)
+
+
+Cases[listOfLists, {__}]
+
+
+(* ::Subsubsection:: *)
+(*Lists containing 0 or more expressions: use BlankNullSequence triple underscore)*)
+
+
+Cases[listOfLists, {___}]
+
+
+(* ::Subsubsection:: *)
+(*Lists containing 0 or more integers*)
+
+
+Cases[listOfLists, {___Integer}]
+
+
+(* ::Subsubsection:: *)
+(*Lists containing 0 or more integers, followed by 1 or more strings*)
+
+
+Cases[listOfLists, {___Integer, __String}]
+
+
+(* ::Subsection:: *)
+(*ReplaceAll (slash dot)*)
 
 
 (* ::Subsection:: *)
