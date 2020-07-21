@@ -617,6 +617,31 @@ Table[n^2, {n, list}]
 
 
 (* ::Subsection:: *)
+(*Use Sum*)
+
+
+(* ::Subsubsection:: *)
+(*Add some integers*)
+
+
+Sum[n, {n, 1, 100}]
+
+
+(* ::Subsubsection:: *)
+(*Make an expression with steps of 2*)
+
+
+Sum[term[n], {n, 1, 10, 2}]
+
+
+(* ::Subsubsection:: *)
+(*Mathematica is smart*)
+
+
+Sum[1 / n^2, {n, 1, Infinity}]
+
+
+(* ::Subsection:: *)
 (*Most operations are vectorised by default*)
 
 
