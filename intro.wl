@@ -9,6 +9,13 @@
 
 
 (*
+  Press F1 for help (unless you're on a Raspberry Pi, in which case bad luck).
+  If you highlight a built-in function and press F1,
+  it will take you straight to the documentation page.
+*)
+
+
+(*
   Mathematica StackExchange:
   "What are the most common pitfalls awaiting new users?"
   <https://mathematica.stackexchange.com/q/18393>
