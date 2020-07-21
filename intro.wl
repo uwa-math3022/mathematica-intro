@@ -756,7 +756,7 @@ MatrixForm[matrixProduct]
 
 
 (* ::Section:: *)
-(*Advanced stuff*)
+(*Advanced stuff (won't need this for MATH3022)*)
 
 
 (* ::Subsection:: *)
