@@ -306,6 +306,35 @@ list[[-1]]
 (*Doing algebra*)
 
 
+(* ::Subsection:: *)
+(*Basic stuff*)
+
+
+x^2 + x * x
+
+
+(* Don't worry pure mathematicians, x == 0 is a removable singularity: *)
+x / x
+x^2 / x
+x / Sqrt[x]
+
+
+(* Mathematica isn't stupid, it can do calculus: *)
+1 / 0
+1 / Infinity
+0 / 0
+Infinity - Infinity
+0 ^ 0
+
+
+(* Mathematica can do algebra with anything, even strings and graphics: *)
+3 + "Chuck Norris" ^ 4 / "Chuck Norris"
+
+
+diskGraphic = Graphics[Disk[], ImageSize -> 100]
+diskGraphic / diskGraphic
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
