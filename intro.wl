@@ -312,3 +312,23 @@ list[[-1]]
 
 (* ::Section:: *)
 (*Don't use loops*)
+
+
+(* ::Section:: *)
+(*Matrix stuff*)
+
+
+(* ::Section:: *)
+(*Advanced stuff*)
+
+
+(* ::Subsection:: *)
+(*Everything is an expression*)
+
+
+(* ::Subsection:: *)
+(*Patterns*)
+
+
+(* ::Subsection:: *)
+(*Fibonacci sequence*)
