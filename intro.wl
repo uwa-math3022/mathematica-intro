@@ -380,6 +380,30 @@ FullSimplify[Sqrt[x^2]]
 FullSimplify[Sqrt[x^2], Assumptions -> x > 0]
 
 
+(* ::Subsection:: *)
+(*Calculus*)
+
+
+(* ::Subsubsection:: *)
+(*Differentiation*)
+
+
+D[x^2, x]
+
+
+D[Sin[x] ^ 100, x]
+
+
+(* D takes partial derivatives *)
+D[x y, x]
+D[u v, x]
+
+
+(* Use Dt for total derivatives *)
+Dt[x y, x]
+Dt[u v, x]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
