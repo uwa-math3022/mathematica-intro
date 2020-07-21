@@ -695,6 +695,34 @@ Eigenvectors[mat]
 Inverse[mat]
 
 
+(* ::Subsection:: *)
+(*Matrix multiplication (dot)*)
+
+
+(* ::Subsubsection:: *)
+(*Dot product*)
+
+
+{a1, a2, a3, a4} . {b1, b2, b3, b4}
+
+
+(* ::Subsubsection:: *)
+(*Matrix multiplication*)
+
+
+mm = Table[a[i, j], {i, 3}, {j, 3}];
+vv = {x, y, z};
+
+
+MatrixForm[mm]
+
+
+matrixProduct = mm . vv
+
+
+MatrixForm[matrixProduct]
+
+
 (* ::Section:: *)
 (*Advanced stuff*)
 
