@@ -266,10 +266,11 @@ Sqrt[2.]
 (*Built-in constants (remember upper case first letter)*)
 
 
-E
-Pi
-I
-Infinity
+E (* Base of natural exponential *)
+Pi (* Circumference divided by diameter *)
+I (* Imaginary unit *)
+Infinity (* Positive infinity *)
+ComplexInfinity (* Infinity in the complex plane with indeterminate argument *)
 
 
 E ^ (I * Pi) + 1
