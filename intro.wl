@@ -520,6 +520,39 @@ list = {2, "blah", 3 + 4 I};
 Table[n^2, {n, list}]
 
 
+(* ::Subsection:: *)
+(*Most operations are vectorised by default*)
+
+
+(* ::Subsubsection:: *)
+(*Vector with a scalar*)
+
+
+{a, b, c} + 2
+{a, b, c} * 2
+{a, b, c} ^ 2
+
+
+(* ::Subsubsection:: *)
+(*Vector with a vector of the same length*)
+
+
+{a, b, c} + {1, 2, 3}
+{a, b, c} * {1, 2, 3}
+{a, b, c} ^ {1, 2, 3}
+
+
+(* ::Subsubsection:: *)
+(*Compatible dimensions*)
+
+
+{a, b, c} + {{1, 2, 3, 4}, {5}, {6, 7}}
+
+
+(* Whoops! *)
+{1, 2} + {3, 4, 5}
+
+
 (* ::Section:: *)
 (*Matrix stuff*)
 
