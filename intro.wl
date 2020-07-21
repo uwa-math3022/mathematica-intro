@@ -78,8 +78,6 @@ myVariable = 4
 
 
 (* Unset it: it turns blue again *)
-
-
 myVariable =.
 
 
@@ -96,7 +94,10 @@ sin
 Sin
 
 
-(* These capital letters are all built-in functions. Don't use them as variables! *)
+(*
+  These capital letters are all built-in functions/constants.
+  Don't use them as variables!
+*)
 C
 D
 E
@@ -228,10 +229,16 @@ Sinh[1]
 
 (* Use N to convert to approximate form *)
 N[Sqrt[2]]
+N[Exp[3]]
+N[Log[3]]
+N[Cos[Pi]]
+N[Sin[0]]
+N[Cosh[0]]
+N[Sinh[1]]
 
 
 (* Round brackets mean multiplication, NOT function application *)
-Sin(Pi)    (* whoops *)
+Sin(Pi)    (* whoops: this is the constant 'Pi' multiplied by the built-in function 'Sin' *)
 Sin[Pi]
 
 
@@ -251,8 +258,8 @@ Sqrt[2.]
 
 
 (* Any approximate part will ruin the exactness of the whole expression *)
-1 + Pi
-1. + Pi
+1 + Pi * Cos[111]
+1. + Pi * Cos[111]
 
 
 (* ::Subsection:: *)
