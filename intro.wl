@@ -467,6 +467,41 @@ sSolution = DSolveValue[{x''[t] == a, x[0] == 0, x'[0] == u}, x[t], t];
 Expand[sSolution]
 
 
+(* ::Subsection:: *)
+(*Normal equation solving*)
+
+
+(* ::Subsubsection:: *)
+(*Quadratic*)
+
+
+Solve[a x^2 + b x + c == 0, x]
+
+
+(* ::Subsubsection:: *)
+(*Systems*)
+
+
+Solve[{2 x + 8 y == 0, x^2 - 3 y^2 == 1}, {x, y}]
+
+
+(* ::Subsubsection:: *)
+(*Solve is meant for exact/symbolic coefficients. Don't use Solve for approximate coefficients!*)
+
+
+(* With approximate coordinates, Mathematica will give a warning *)
+Solve[{2.2 x + 8 y == 0, x^2 - 3 y^2 == 1}, {x, y}]
+
+
+(* ::Subsubsection:: *)
+(*For approximate coefficients use numerical root finding instead*)
+
+
+xInitialGuess = 1;
+yInitialGuess = 0;
+FindRoot[{2.2 x + 8 y == 0, x^2 - 3 y^2 == 1}, {{x, xInitialGuess}, {y, yInitialGuess}}]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
