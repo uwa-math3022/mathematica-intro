@@ -940,23 +940,25 @@ expressionList /. {fun -> "FUNNY"}
 
 
 (* ::Subsubsection:: *)
-(*Replace expressions of the form g[x] with g[x^2]*)
+(*Replace expressions of the form g[s] with g[s^2]*)
 
 
-expressionList /. {g_[x_] -> g[x^2]}
-
-
-(*
-  Notice how x on the RHS is blue (not set to any value yet).
-  The above won't work as intended if x is already defined:
-*)
-x = 100;
-expressionList /. {g_[x_] -> g[x^2]}
+expressionList /. {g_[s_] -> g[s^2]}
 
 
 (*
-  Use RuleDelayed (:>) instead of Rule (->) to locally scope x.
-  Notice how x on the RHS is now also green:
+  Notice how s on the RHS is not green (not set to any value yet).
+  This is because Rule (->) evaluates the RHS immediately.
+  The above won't work as intended if s is already defined:
 *)
-x = 100;
-expressionList /. {g_[x_] :> g[x^2]}
+s = 100;
+expressionList /. {g_[s_] -> g[s^2]}
+
+
+(*
+  Use RuleDelayed (:>) instead of Rule (->) to locally scope s.
+  RHS is not evaluated until the match is found.
+  Notice how s on the RHS is now also green:
+*)
+s = 100;
+expressionList /. {g_[s_] :> g[s^2]}
