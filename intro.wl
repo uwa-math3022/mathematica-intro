@@ -808,14 +808,14 @@ Cases[expressionList, _]
 
 
 (* ::Subsubsection:: *)
-(*Match expressions of the form anything[anything]*)
+(*Match expressions of the form x[y]*)
 
 
 Cases[expressionList, _[_]]
 
 
 (* ::Subsubsection:: *)
-(*Match expressions of the form anything[anything] where the two anythings are equal*)
+(*Match expressions of the form x[y] where x equals y*)
 
 
 Cases[expressionList, x_[y_] /; x == y]
@@ -882,5 +882,34 @@ Cases[listOfLists, {___Integer, __String}]
 (*ReplaceAll (slash dot)*)
 
 
-(* ::Subsection:: *)
-(*Fibonacci sequence*)
+expressionList = {a, b, "ccc", 1, 2, 3.5, fun[4], fun[5], aaa[aaa], 3[3], 3 + Sqrt[5]}
+
+
+(* ::Subsubsection:: *)
+(*Apply a list of replacement rules*)
+
+
+expressionList /. {fun -> "FUNNY"}
+
+
+(* ::Subsubsection:: *)
+(*Replace expressions of the form g[x] with g[x^2]*)
+
+
+expressionList /. {g_[x_] -> g[x^2]}
+
+
+(*
+  Notice how x on the RHS is blue (not set to any value yet).
+  The above won't work as intended if x is already defined:
+*)
+x = 100;
+expressionList /. {g_[x_] -> g[x^2]}
+
+
+(*
+  Use RuleDelayed (:>) instead of Rule (->) to locally scope x.
+  Notice how x on the RHS is now also green:
+*)
+x = 100;
+expressionList /. {g_[x_] :> g[x^2]}
