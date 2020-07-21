@@ -26,6 +26,13 @@
 
 
 (* ::Subsection:: *)
+(*Clear all variables*)
+
+
+ClearAll["Global`*"]
+
+
+(* ::Subsection:: *)
 (*Evaluating a cell*)
 
 
