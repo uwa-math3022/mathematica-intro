@@ -104,3 +104,40 @@ I
 K
 N
 O
+
+
+(* ::Subsection:: *)
+(*Setting variables (=, :=)*)
+
+
+(* ::Subsubsection:: *)
+(*Set (single equals): assign a value*)
+
+
+myVariable = 3
+someString = "blah blah"
+
+
+(* Do NOT confuse with double equals (checks for equality)! *)
+
+
+(* ::Subsubsection:: *)
+(*Use semicolon to suppress output*)
+
+
+suppressed = 10;
+
+
+(* ::Subsubsection:: *)
+(*SetDelayed (colon equals): assign a value without evaluating yet*)
+
+
+(*
+  Define a function.
+  The underscore after the x is pattern object, called a 'Blank'.
+*)
+f[x_] := x^2
+
+
+(* Call it: *)
+f[3]
