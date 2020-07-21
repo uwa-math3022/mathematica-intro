@@ -568,6 +568,37 @@ Exp[list]
 (*Matrix stuff*)
 
 
+(* ::Subsection:: *)
+(*A matrix is simply a list of lists*)
+
+
+mat = {{1, 2}, {3, 4}}
+
+
+(* ::Subsection:: *)
+(*Pretty formatting (but don't do operations with the formatted version)*)
+
+
+MatrixForm[mat]
+
+
+(* ::Subsection:: *)
+(*Built-in functions*)
+
+
+(* Determinant *)
+Det[mat]
+
+
+Eigenvalues[mat]
+
+
+Eigenvectors[mat]
+
+
+Inverse[mat]
+
+
 (* ::Section:: *)
 (*Advanced stuff*)
 
