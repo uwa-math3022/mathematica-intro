@@ -361,7 +361,20 @@ Apart[1 / ((x^3 - 3 x) x^5)]
 
 
 (* ::Subsubsection:: *)
+(*Use FullSimplify when Mathematica is lazy*)
+
+
+(x + 1)^3 == x^3 + 3 x^2 + 3 x + 1
+
+
+FullSimplify[(x + 1)^3 == x^3 + 3 x^2 + 3 x + 1]
+
+
+(* ::Subsubsection:: *)
 (*Sometimes you need to tell Mathematica some assumptions*)
+
+
+FullSimplify[Sqrt[x^2]]
 
 
 FullSimplify[Sqrt[x^2], Assumptions -> x > 0]
