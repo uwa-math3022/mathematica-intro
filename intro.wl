@@ -46,3 +46,50 @@
   Pressing [Enter] instead of [Shift + Enter]
   will insert a line break instead of evaluating the cell.
 *)
+
+
+(* ::Subsection:: *)
+(*Variables*)
+
+
+(* ::Subsubsection:: *)
+(*... must start with a letter and contain only letters and digits (NO underscores)*)
+
+
+(* OK *)
+var1
+myVariable
+
+
+(* Not OK: parsed as the number 1 times the variable `var` *)
+1var
+
+
+(* ::Subsubsection:: *)
+(*... are blue when not set, and black when set*)
+
+
+(* Currently blue *)
+myVariable
+
+
+(* Set it to some value: it turns black *)
+myVariable = 4
+
+
+(* Unset it: it turns blue again *)
+
+
+myVariable =.
+
+
+(* ::Subsubsection:: *)
+(*... are case-sensitive. In particular, built-in functions start with a capital letter.*)
+
+
+(* A user variable, not set to anything (blue) *)
+sin
+
+
+(* The built-in sine function (black, since it's already defined) *)
+Sin
