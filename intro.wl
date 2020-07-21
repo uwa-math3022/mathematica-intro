@@ -101,6 +101,7 @@ sin
 Sin
 
 
+(* Compare *)
 sin[Pi]
 Sin[Pi]
 
@@ -150,7 +151,8 @@ f[x_] := x^2
 
 
 (* Call it: *)
-f[3]
+f[2]
+f[100]
 
 
 (* ::Subsubsection:: *)
@@ -159,7 +161,7 @@ f[3]
 
 (*
   Set (equals) evaluates the RHS immediately.
-  Notice how 'alreadyDefinedVariable' on the RHS
+  Notice how 'alreadyDefinedVariable' on the RHS below
   is NOT green like 'alreadyDefinedVariable' the LHS:
 *)
 alreadyDefinedVariable = 3;
@@ -173,14 +175,15 @@ f[100]
 
 (*
   SetDelayed (colon equals) doesn't evaluate the RHS until the function is called.
-  Notice how 'alreadyDefinedVariable' on the RHS
-  IS green like 'alreadyDefinedVariable' the LHS:
+  Notice how 'alreadyDefinedVariable' on the RHS below
+  IS green like 'alreadyDefinedVariable' the LHS
+  (it's part of the same local scope):
 *)
 alreadyDefinedVariable = 3;
 f[alreadyDefinedVariable_] := alreadyDefinedVariable^2
 
 
-(* That's better *)
+(* That's better: *)
 f[2]
 f[100]
 
@@ -199,7 +202,8 @@ f[100]
 
 
 (*
-  If you use single equals by mistake, an error occurs:
+  If you use single equals by mistake, an error occurs
+  when Mathematica tries to assign the value 4 to the expression '2 + 2':
 *)
 2 + 2 = 4
 
@@ -216,7 +220,7 @@ f[100]
 (*Addition (plus)*)
 
 
-1 + 1
+3 + 4
 111 + 999
 123456789 + 32109876
 
@@ -225,7 +229,7 @@ f[100]
 (*Subtraction (hyphen)*)
 
 
-1 - 1
+3 - 4
 111 - 999
 123456789 - 32109876
 
@@ -235,7 +239,7 @@ f[100]
 
 
 (* The front end will display a grey times symbol if you just use a space. *)
-1 * 1
+3 * 4
 111 999
 123456789 32109876
 
@@ -244,7 +248,7 @@ f[100]
 (*Division (slash)*)
 
 
-1 / 1
+3 / 4
 111 / 999
 123456789 / 32109876
 
@@ -253,7 +257,7 @@ f[100]
 (*Power (caret)*)
 
 
-1 ^ 1
+3 ^ 4
 2 ^ 100
 
 
@@ -565,7 +569,7 @@ Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}]
 
 
 (* ::Subsection:: *)
-(*Options are key driven, specified using rules (->)*)
+(*Options are key driven, specified using rules (hyphen right-angle-bracket)*)
 
 
 Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}
