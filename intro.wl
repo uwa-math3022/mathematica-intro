@@ -1022,3 +1022,50 @@ expressionList /. {g_[s_] -> g[s^2]}
 *)
 s = 100;
 expressionList /. {g_[s_] :> g[s^2]}
+
+
+(* ::Subsection:: *)
+(*Pure functions*)
+
+
+(* ::Subsubsection:: *)
+(*Slot (hash): close function body with ampersand*)
+
+
+pureFun = # + 3 # ^ 2 &;
+pureFun[x]
+
+
+(* ::Subsubsection:: *)
+(*Or use Function instead of ampersand*)
+
+
+pureFun = Function[# / 3];
+pureFun[x]
+
+
+(* ::Subsubsection:: *)
+(*Multiple slots*)
+
+
+pureFun = #1 ^ 2 + 9 #2 ^ 2 + 99 #3 ^2 &;
+pureFun[x, y, z]
+
+
+pureFun = Function[#1 #2 #3];
+pureFun[x, y, z]
+
+
+(* ::Subsubsection:: *)
+(*Explicitly named arguments*)
+
+
+pureFun = Function[{x, y, z}, x y + y z + z x];
+pureFun[x, y, z]
+
+
+(* ::Subsubsection:: *)
+(*Use a pure function anonymously*)
+
+
+Function[{x, y}, Sqrt[x^2 + y^2]][3, 4]
