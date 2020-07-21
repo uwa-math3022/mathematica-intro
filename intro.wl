@@ -765,7 +765,7 @@ MatrixForm[matrixProduct]
 
 (*
   Mathematica tries to be as general as possible.
-  As we have seen above, you an do algebra on strings and graphics.
+  As we have seen above, you can do algebra on strings and graphics.
   Everything is an "expression" with the following representation:
     f[x, y, ...]
   The 'f' part is called the 'Head'.
