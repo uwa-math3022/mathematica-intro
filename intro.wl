@@ -255,4 +255,14 @@ Sqrt[2.]
 1. + Pi
 
 
+(* ::Subsection:: *)
+(*Built-in constants (remember upper case first letter)*)
 
+
+E
+Pi
+I
+Infinity
+
+
+E ^ (I * Pi) + 1
