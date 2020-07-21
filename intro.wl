@@ -160,4 +160,57 @@ f[3]
 2 + 2 = 4
 
 
+(* ::Section:: *)
+(*Calculating stuff*)
+
+
+(* ::Subsection:: *)
+(*Arithmetic*)
+
+
+(* ::Subsubsection:: *)
+(*Addition (plus)*)
+
+
+1 + 1
+111 + 999
+123456789 + 32109876
+
+
+(* ::Subsubsection:: *)
+(*Subtraction (hyphen)*)
+
+
+1 - 1
+111 - 999
+123456789 - 32109876
+
+
+(* ::Subsubsection:: *)
+(*Multiplication (asterisk OR space)*)
+
+
+(* The front end will display a grey times symbol if you just use a space. *)
+1 * 1
+111 999
+123456789 32109876
+
+
+(* ::Subsubsection:: *)
+(*Division (slash)*)
+
+
+1 / 1
+111 / 999
+123456789 / 32109876
+
+
+(* ::Subsubsection:: *)
+(*Power (caret)*)
+
+
+1 ^ 1
+2 ^ 100
+
+
 
