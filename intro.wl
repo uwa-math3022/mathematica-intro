@@ -491,7 +491,7 @@ Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}
 (*Plot a function of two variables*)
 
 
-Plot3D[Sin[x] Cos[y], {x, 0, 2 Pi}, {y, 0, 2 Pi}]
+Plot3D[Sin[x] Sin[y], {x, 0, 2 Pi}, {y, 0, 2 Pi}]
 
 
 (* ::Section:: *)
