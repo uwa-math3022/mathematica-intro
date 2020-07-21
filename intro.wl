@@ -420,6 +420,17 @@ Integrate[1/x, {x, 1, 2}]
 Integrate[r^2 Sin[theta], {r, 0, rMax}, {theta, 0, Pi}, {phi, 0, 2 Pi}]
 
 
+(* ::Subsubsection:: *)
+(*Limits*)
+
+
+Limit[Sin[x] / x, x -> 0]
+Limit[Sin[x] / x, x -> Infinity]
+
+
+Limit[(x^(1 + n) - 1) / (1 + n), n -> -1]
+
+
 (* ::Section:: *)
 (*Plotting stuff*)
 
