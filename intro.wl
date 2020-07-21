@@ -713,6 +713,45 @@ Head[Head]
 
 
 (* ::Subsection:: *)
+(*Distributing functions*)
+
+
+(* ::Subsubsection:: *)
+(*Apply (@@): replace the head by a function*)
+
+
+Apply[newFun, oldFun[a, b, c, d]]
+
+
+Apply[Plus, {a, b, c, d}]
+
+
+(* Shorthand *)
+Plus @@ {a, b, c, d}
+
+
+(* ::Subsubsection:: *)
+(*Map (/@): apply a function to elements at the first level*)
+
+
+Map[fun, {a, b, c, d}]
+
+
+(* Shorthand *)
+fun /@ {a, b, c, d}
+
+
+(* ::Subsubsection:: *)
+(*Through: distribute operators inside a head*)
+
+
+Through[grouping[fun1, fun2, fun3, fun4][x]]
+
+
+Through[{fun1, fun2, fun3, fun4}[x]]
+
+
+(* ::Subsection:: *)
 (*Patterns*)
 
 
