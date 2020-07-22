@@ -249,7 +249,7 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Multiplication (* OR [space])*)
+(*Multiplication ( * OR [space])*)
 
 
 (*
