@@ -45,7 +45,10 @@ ClearAll["Global`*"]
 
 
 (*
-  Code goes inside input cells. To evaluate an input cell:
+  Code goes inside input cells.
+  The cell brackets on the right of the screen
+  tell you where cells begin and end.
+  To evaluate an input cell:
   1. Put the cursor into the cell
   2. Press [Shift + Enter] or press [Numpad Enter].
   Try this with the cell below:
@@ -56,7 +59,7 @@ ClearAll["Global`*"]
 
 
 (*
-  An output cell will containing the result
+  An output cell containing the result
   will appear below the input cell.
   Pressing [Enter] instead of [Shift + Enter]
   will insert a line break instead of evaluating the cell.
@@ -132,7 +135,7 @@ O
 
 
 (* ::Subsubsection:: *)
-(*Set (single equals): assign a value*)
+(*Set (=): assign a value*)
 (*Do NOT confuse with double equals (checks for equality)!*)
 
 
@@ -148,12 +151,13 @@ suppressed = 10;
 
 
 (* ::Subsubsection:: *)
-(*SetDelayed (colon equals): assign a value without evaluating yet*)
+(*SetDelayed (:=): assign a value without evaluating yet*)
 
 
 (*
   Define a function.
-  The underscore after the x is pattern object, called a 'Blank'.
+  The underscore after the x on the LHS is pattern object,
+  called a 'Blank'.
 *)
 f[x_] := x^2
 
@@ -168,9 +172,9 @@ f[100]
 
 
 (*
-  Set (equals) evaluates the RHS immediately.
+  Set (=) evaluates the RHS immediately.
   Notice how 'alreadyDefinedVariable' on the RHS below
-  is NOT green like 'alreadyDefinedVariable' the LHS:
+  is *not* green like 'alreadyDefinedVariable' on the LHS:
 *)
 alreadyDefinedVariable = 3;
 f[alreadyDefinedVariable_] = alreadyDefinedVariable^2
@@ -182,10 +186,10 @@ f[100]
 
 
 (*
-  SetDelayed (colon equals) doesn't evaluate the RHS
+  SetDelayed (:=) doesn't evaluate the RHS
   until the function is called.
   Notice how 'alreadyDefinedVariable' on the RHS below
-  IS green like 'alreadyDefinedVariable' the LHS
+  *is* green like 'alreadyDefinedVariable' on the LHS
   (it's part of the same local scope):
 *)
 alreadyDefinedVariable = 3;
@@ -202,8 +206,8 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Equal (double equals): compare two values*)
-(*Do NOT confuse with single equals (assigns a value)!*)
+(*Equal (==): compare two values*)
+(*Do NOT confuse with single equals (assigns a value)*)
 
 
 2 + 2 == 4
@@ -227,7 +231,7 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Addition (plus)*)
+(*Addition (+)*)
 
 
 3 + 4
@@ -236,7 +240,7 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Subtraction (hyphen)*)
+(*Subtraction (-)*)
 
 
 3 - 4
@@ -245,7 +249,7 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Multiplication (asterisk OR space)*)
+(*Multiplication (* OR [space])*)
 
 
 (*
@@ -258,7 +262,7 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Division (slash)*)
+(*Division (/)*)
 
 
 3 / 4
@@ -267,7 +271,7 @@ f[100]
 
 
 (* ::Subsubsection:: *)
-(*Power (caret)*)
+(*Power (^)*)
 
 
 3 ^ 4
@@ -340,7 +344,7 @@ E (* Base of natural exponential *)
 Pi (* Circumference divided by diameter *)
 I (* Imaginary unit *)
 Infinity (* Positive infinity *)
-ComplexInfinity (* Infinity in the complex plane with indeterminate argument *)
+ComplexInfinity (* Infinity in the complex plane *)
 
 
 E ^ (I * Pi) + 1
@@ -373,7 +377,7 @@ list[[1]]
 list[[2]]
 
 
-(* Negative indices from the end *)
+(* Use negative indices to count backwards from the end *)
 list[[-1]]
 
 
@@ -553,7 +557,10 @@ Solve[{2 x + 8 y == 0, x^2 - 3 y^2 == 1}, {x, y}]
 (*Solve is meant for exact/symbolic coefficients. Don't use Solve for approximate coefficients!*)
 
 
-(* With approximate coordinates, Mathematica will give a warning *)
+(*
+  With approximate coordinates, Mathematica will give a warning.
+  Don't do this:
+*)
 Solve[{2.2 x + 8 y == 0, x^2 - 3 y^2 == 1}, {x, y}]
 
 
@@ -589,6 +596,7 @@ Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}]
 (*Options are key driven, specified using rules (hyphen right-angle-bracket)*)
 
 
+(* Rules are specified in the form 'key -> value' *)
 Plot[{Sin[x], 1 - x}, {x, 0, 2 Pi}
   , PlotLegends -> "Expressions"
   , PlotStyle -> {Directive[Red, Dashed], Black}
@@ -881,7 +889,7 @@ fun[x]
 
 
 (* ::Subsubsection:: *)
-(*Postfix form (double slash)*)
+(*Postfix form (//)*)
 
 
 x // fun
@@ -898,7 +906,7 @@ x // fun
 
 
 (* ::Subsubsection:: *)
-(*Infix form for multiple arguments (tildes)*)
+(*Infix form for multiple arguments (~)*)
 
 
 x1 ~ fun ~ x2
@@ -1040,7 +1048,7 @@ expressionList /. {g_[s_] :> g[s^2]}
 
 
 (* ::Subsubsection:: *)
-(*Slot (hash): close function body with ampersand*)
+(*Slot (#): function body is delimited with an ampersand (&)*)
 
 
 pureFun = # + 3 # ^ 2 &;
