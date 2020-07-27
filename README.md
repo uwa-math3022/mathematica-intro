@@ -23,8 +23,8 @@ This means that
 * [StackExchange: "What are the most common pitfalls awaiting new users?"][mse]
 * [Use Mathematica in the browser][cloud] (can't save anything though)
 
-[nb]: https://github.com/uwa-math3022/mathematica-intro/releases/download/v0.1.1/intro.nb
-[wl]: https://github.com/uwa-math3022/mathematica-intro/releases/download/v0.1.1/intro.wl
+[nb]: https://github.com/uwa-math3022/mathematica-intro/releases/download/v0.1.2/intro.nb
+[wl]: https://github.com/uwa-math3022/mathematica-intro/releases/download/v0.1.2/intro.wl
 
 [mse]: https://mathematica.stackexchange.com/q/18393
 [cloud]: https://develop.open.wolframcloud.com/app/view/newNotebook?ext=nb
